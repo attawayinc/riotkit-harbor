@@ -14,15 +14,15 @@ Please note, that it requires **all changes to be committed to git repository** 
 
 .. code:: yaml
 
-    deploy_user: my-deployment-user
-    deploy_group: my-deployment-user
+    deploy_user: codespace
+    deploy_group: codespace
 
     # Directory, where the project will be installed
-    remote_dir: /home/my-deployment-user/project
+    remote_dir: /home/codespace/project
 
     # Target repository to clone (in most cases it should be the same repository as current one)
     # leave commented for automatic detection
-    #git_url: git@github.com:your-org/your-repo.git
+    git_url: git@github.com:attawayinc/riotkit-harbor.git
 
     # Secret url is helpful, when you cannot setup working ssh-agent. Secret url is used only at deployment time, later
     # a regular URL (without credentials) is leaved on the machine
@@ -35,7 +35,7 @@ Please note, that it requires **all changes to be committed to git repository** 
         production:
             - host: remote-host.org
               port: 2222
-              user: my-deployment-user
+              user: codespace
               sudo_password: my-sudo-password
 
               # select between password or key-based authentication
